@@ -20,6 +20,25 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    swapped = True
+
+    def swap(i):
+        temp = arr[i]
+        arr[i] = arr[i-1]
+        arr[i-1] = temp
+    
+    if(len(arr) < 1):
+        return arr
+
+    while swapped:
+        for i in range(1, len(arr)):
+            for i in range(1, len(arr)):
+                swapped = False
+                if( arr[i-1] > arr[i]):
+                    swapped = True
+                    swap(i)
+        if not swapped:
+            break
 
     return arr
 
